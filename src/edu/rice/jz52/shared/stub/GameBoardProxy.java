@@ -14,7 +14,7 @@ import edu.rice.jz52.server.domain.GameBoard;
  * @author jz52@rice.edu
  *
  */
-@ProxyFor(GameBoard.class)
+@ProxyFor(value = GameBoard.class)
 public interface GameBoardProxy extends EntityProxy {
 	
 	/**
@@ -42,13 +42,6 @@ public interface GameBoardProxy extends EntityProxy {
 	public Integer getColumnNumber();
 
 	/**
-	 * this a getter method for field cells
-	 * use proxy type instead.
-	 * @return the cells
-	 */
-	public List<CellProxy> getCells();
-	
-	/**
 	 * this is a setter method for field rowNumber
 	 * @param rowNumber the rowNumber to set
 	 */
@@ -61,9 +54,15 @@ public interface GameBoardProxy extends EntityProxy {
 	public void setColumnNumber(Integer columnNumber);
 
 	/**
+	 * this a getter method for field cells
+	 * @return the cells
+	 */
+	public List<Integer> getCells();
+	
+	/**
 	 * this is a setter method for field cells
 	 * @param cells the cells to set
 	 */
-	public void setCells(List<CellProxy> cells);
+	public void setCells(List<Integer> cells);
 	
 }

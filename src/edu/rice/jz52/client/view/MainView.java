@@ -19,8 +19,6 @@ import edu.rice.jz52.client.presenter.MainPresenter;
 public class MainView extends Composite implements MainPresenter.Display {
 
 	private VerticalPanel panel = new VerticalPanel();
-//	private TextArea statusTextArea = new TextArea();
-//	private Grid gameBoard;
 
 	private Button startButton = new Button("Start");
 	private Button resetButton = new Button("Reset");
@@ -29,10 +27,6 @@ public class MainView extends Composite implements MainPresenter.Display {
 	
 	private TextBox rowsNumberBox = new TextBox();
 	private TextBox columnsNumberBox = new TextBox();
-
-	// temp use row number and row number
-//	private final int BOARD_ROW_NUMBER = 5;
-//	private final int BOARD_COLUMN_NUMBER = 5;
 
 	public MainView() {
 		initWidget(panel);
@@ -44,27 +38,7 @@ public class MainView extends Composite implements MainPresenter.Display {
 		controlPanel.add(resetButton);
 		controlPanel.add(undoButton);
 
-		// TODO configure game board
-//		gameBoard = new Grid(BOARD_ROW_NUMBER, BOARD_COLUMN_NUMBER);
-//		for (int i = 0; i < BOARD_ROW_NUMBER; i++) {
-//			for (int j = 0; j < BOARD_COLUMN_NUMBER; j++) {
-//				final int row = i;
-//				final int column = j;
-//				Button checker = new Button();
-//				checker.addClickHandler(new ClickHandler() {
-//					@Override
-//					public void onClick(ClickEvent event) {
-//						statusTextArea.setText("you pressed the button: row "
-//								+ row + " and cloumn " + column);
-//					}
-//				});
-//				gameBoard.setWidget(row, column, checker);
-//			}
-//		}
-
 		panel.add(controlPanel);
-//		panel.add(gameBoard);
-//		panel.add(statusTextArea);
 	}
 
 	public Widget asWidget() {

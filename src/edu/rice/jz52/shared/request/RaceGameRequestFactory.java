@@ -12,6 +12,4 @@ import com.google.web.bindery.requestfactory.shared.RequestFactory;
 public interface RaceGameRequestFactory extends RequestFactory {
 
 	GameBoardRequest gameBoardRequest();
-	
-	CellRequest cellRequest();
 }

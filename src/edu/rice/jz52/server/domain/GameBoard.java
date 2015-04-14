@@ -6,7 +6,6 @@ package edu.rice.jz52.server.domain;
 import java.util.List;
 
 import javax.jdo.annotations.Column;
-import javax.jdo.annotations.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
@@ -35,8 +34,23 @@ public class GameBoard {
 	
 	private Integer columnNumber;
 	
-	@Embedded
-	private List<Cell> cells;
+	private List<Integer> cells;
+
+	/**
+	 * this a getter method for field cells
+	 * @return the cells
+	 */
+	public List<Integer> getCells() {
+		return cells;
+	}
+
+	/**
+	 * this is a setter method for field cells
+	 * @param cells the cells to set
+	 */
+	public void setCells(List<Integer> cells) {
+		this.cells = cells;
+	}
 
 	/**
 	 * this a getter method for field id
@@ -71,14 +85,6 @@ public class GameBoard {
 	}
 
 	/**
-	 * this a getter method for field cells
-	 * @return the cells
-	 */
-	public List<Cell> getCells() {
-		return cells;
-	}
-	
-	/**
 	 * this is a setter method for field rowNumber
 	 * @param rowNumber the rowNumber to set
 	 */
@@ -92,14 +98,6 @@ public class GameBoard {
 	 */
 	public void setColumnNumber(Integer columnNumber) {
 		this.columnNumber = columnNumber;
-	}
-
-	/**
-	 * this is a setter method for field cells
-	 * @param cells the cells to set
-	 */
-	public void setCells(List<Cell> cells) {
-		this.cells = cells;
 	}
 
 	/**
@@ -142,7 +140,6 @@ public class GameBoard {
 	 * @return
 	 */
 	private static final EntityManager entityManager() {
-//		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("transactions-optional");
 		return EMF.get().createEntityManager();
 	}
 	
