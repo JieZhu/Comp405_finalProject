@@ -1,0 +1,2 @@
+serviceClass: edu.rice.jz52.client.View2ModelService
+path: 0DC802CFA3C033DD737482B288996B1F.gwt.rpc

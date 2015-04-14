@@ -1,0 +1,3 @@
+# Module finalproject
+# RPC service class, partial path of RPC policy file
+edu.rice.jz52.client.View2ModelService, 0DC802CFA3C033DD737482B288996B1F.gwt.rpc
