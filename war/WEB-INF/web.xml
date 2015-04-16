@@ -6,6 +6,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
+
 <servlet>
 	<servlet-name>view2ModelServiceImpl</servlet-name>
 	<servlet-class>edu.rice.jz52.server.View2ModelServiceImpl</servlet-class>
@@ -32,9 +33,19 @@
     <url-pattern>/gwtRequest</url-pattern>
 </servlet-mapping>
 
+<servlet>
+	<servlet-name>gameViewServlet</servlet-name>
+	<servlet-class>edu.rice.jz52.server.httpservlet.GameGUIServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>gameViewServlet</servlet-name>
+	<url-pattern>finalproject/gameView</url-pattern>
+</servlet-mapping>
+
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>FinalProject.html</welcome-file>
-  </welcome-file-list>
+  </welcome-file-list>  
 
 </web-app>

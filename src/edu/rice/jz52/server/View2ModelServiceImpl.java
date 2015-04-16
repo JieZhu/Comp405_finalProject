@@ -7,7 +7,7 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
-import edu.rice.jz52.client.View2ModelService;
+import edu.rice.jz52.player.View2ModelService;
 
 /**
  * @author jz52@rice.edu
